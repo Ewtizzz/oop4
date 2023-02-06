@@ -1,6 +1,6 @@
 package transport;
 
-public class Transport {
+public abstract class Transport {
     public static String mark;
     public static String model;
     public static int engineVolume;
@@ -45,4 +45,5 @@ public class Transport {
     public void setEngineVolume(int engineVolume) {
         this.engineVolume = engineVolume;
     }
+    public abstract void printType();
 }
