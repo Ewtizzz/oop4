@@ -52,4 +52,9 @@ public class Truck extends Transport implements Competing{
             System.out.println("грузоподъемность: " + from + to);
         }
     }
+
+    @Override
+    public boolean diagnostic() {
+        return false;
+    }
 }

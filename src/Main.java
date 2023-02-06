@@ -17,6 +17,8 @@ public class Main {
         Truck FordCargo41 = new Truck("Ford","Cargo",420, LoadType.N1);
         Truck ManTgs = new Truck("Man","Tgs",400, LoadType.N3);
 
+        diagnostic(AudiR8,MercedesS63,BugattiVeyron,NissanMurano, MercedesSprinter,MercedesV220,FordTransit,IvecoCarvin,MercedesArocs,Fuso7C,FordCargo41,ManTgs);
+
         DriverA drivera = new DriverA<>("Максим Максимович Максимов", true, 3);
         System.out.println("Водитель '" + drivera.getFio() + "' управляет автомобилем AudiR8 и будет участвовать в заезде");
 
@@ -24,6 +26,18 @@ public class Main {
         printInfo(MercedesSprinter);
         printInfo(Fuso7C);
 
+    }
+
+    private static void diagnostic(Transport... transports){
+        for (Transport transport : transports) {
+            if (!transport.diagnostic()) {
+                try{
+                    throw new RuntimeException(Transport.getMark() + " " + transport.getModel() + " не прошел проверку");
+                }catch (RuntimeException e){
+                    System.out.println(e.getMessage());
+                }
+            }
+        }
     }
     private static void printInfo(Transport transport){
         transport.printType();

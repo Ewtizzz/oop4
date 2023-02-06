@@ -7,18 +7,18 @@ public abstract class Transport {
 
     public Transport(String mark, String model, int engineVolume) {
         if (mark != null || mark.isEmpty()){
-            this.mark = "BMW";
+            Transport.mark = "BMW";
         }else{
-            this.mark = mark;
+            Transport.mark = mark;
         }
 
         if (model != null || model.isEmpty()){
-            this.model = "M4";
+            Transport.model = "M4";
         }else{
-            this.model = model;
+            Transport.model = model;
         }
         if (engineVolume <= 0){
-            this.engineVolume = 3;
+            Transport.engineVolume = 3;
         }
     }
 
@@ -46,4 +46,5 @@ public abstract class Transport {
         this.engineVolume = engineVolume;
     }
     public abstract void printType();
+    public abstract boolean diagnostic();
 }

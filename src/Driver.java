@@ -9,6 +9,31 @@ public class Driver {
         this.experience = experience;
     }
 
+    public String getFio() {
+        return fio;
+    }
+
+    public void setFio(String fio) {
+        this.fio = fio;
+    }
+
+    public boolean isHaveDriverLicence() {
+        return haveDriverLicence;
+    }
+
+    public void setHaveDriverLicence(boolean haveDriverLicence) {
+        this.haveDriverLicence = haveDriverLicence;
+    }
+
+    public int getExperience() {
+        return experience;
+    }
+
+    public void setExperience(int experience) {
+        this.experience = experience;
+    }
+    public
+
     void startMoving(){
         System.out.println("начинаю движение");
     }

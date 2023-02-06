@@ -48,4 +48,9 @@ public class Car extends Transport implements Competing{
             System.out.println("тип кузова: " + bodyType);
         }
     }
+
+    @Override
+    public boolean diagnostic() {
+        return false;
+    }
 }
