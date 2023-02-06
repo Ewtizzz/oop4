@@ -1,6 +1,6 @@
 package transport;
 
-public class Bus extends Transport implements competing{
+public class Bus extends Transport implements Competing{
 
 
     public Bus(String mark, String model, int engineVolume) {

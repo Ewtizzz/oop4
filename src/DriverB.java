@@ -1,16 +1,10 @@
-import transport.Bus;
-
-public class DriverB<T extends Bus> {
-    public String fio;
+public class DriverB<T extends Driver> {
+    private String fio;
     public boolean haveDriverLicence;
     public int experience;
 
     public String getFio() {
         return fio;
-    }
-
-    public void setFio(String fio) {
-        this.fio = fio;
     }
 
     public boolean isHaveDriverLicence() {
@@ -33,16 +27,5 @@ public class DriverB<T extends Bus> {
         this.fio = fio;
         this.haveDriverLicence = haveDriverLicence;
         this.experience = experience;
-    }
-
-    void startMoving(){
-        System.out.println("начинаю движение");
-    }
-
-    void stopMoving(){
-        System.out.println("останавливаю движение");
-    }
-    void refuelCar(){
-        System.out.println("заправляю машину");
     }
 }
