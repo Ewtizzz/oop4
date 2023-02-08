@@ -1,4 +1,6 @@
-public class DriverC<T extends Driver> {
+import transport.Truck;
+
+public class DriverC extends Driver<Truck>  {
     private String fio;
     public boolean haveDriverLicence;
     public int experience;

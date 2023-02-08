@@ -1,9 +1,12 @@
-public class DriverA<T extends Driver> {
+import transport.Car;
+
+public class DriverA extends Driver<Car>  {
     private String fio;
     public boolean haveDriverLicence;
     public int experience;
 
     public DriverA(String fio, boolean haveDriverLicence, int experience) {
+        super();
         this.fio = fio;
         this.haveDriverLicence = haveDriverLicence;
         this.experience = experience;

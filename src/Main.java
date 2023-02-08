@@ -19,7 +19,7 @@ public class Main {
 
         diagnostic(AudiR8,MercedesS63,BugattiVeyron,NissanMurano, MercedesSprinter,MercedesV220,FordTransit,IvecoCarvin,MercedesArocs,Fuso7C,FordCargo41,ManTgs);
 
-        DriverA drivera = new DriverA<>("Максим Максимович Максимов", true, 3);
+        DriverA drivera = new DriverA("Максим Максимович Максимов", true, 3);
         System.out.println("Водитель '" + drivera.getFio() + "' управляет автомобилем AudiR8 и будет участвовать в заезде");
 
         printInfo(AudiR8);
@@ -32,7 +32,7 @@ public class Main {
         for (Transport transport : transports) {
             if (!transport.diagnostic()) {
                 try{
-                    throw new RuntimeException(Transport.getMark() + " " + transport.getModel() + " не прошел проверку");
+                    throw new RuntimeException(transport.getMark() + " " + transport.getModel() + " не прошел проверку");
                 }catch (RuntimeException e){
                     System.out.println(e.getMessage());
                 }

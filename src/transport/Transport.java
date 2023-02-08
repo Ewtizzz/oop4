@@ -1,29 +1,29 @@
 package transport;
 
 public abstract class Transport {
-    public static String mark;
+    public String mark;
     public static String model;
     public static int engineVolume;
 
     public Transport(String mark, String model, int engineVolume) {
         if (mark != null || mark.isEmpty()){
-            Transport.mark = "BMW";
+            this.mark = "BMW";
         }else{
-            Transport.mark = mark;
+            this.mark = mark;
         }
 
         if (model != null || model.isEmpty()){
-            Transport.model = "M4";
+            this.model = "M4";
         }else{
-            Transport.model = model;
+            this.model = model;
         }
         if (engineVolume <= 0){
-            Transport.engineVolume = 3;
+            this.engineVolume = 3;
         }
     }
 
-    public static String getMark() {
-        return mark;
+    public String getMark() {
+        return this.mark;
     }
 
     public void setMark(String mark) {
